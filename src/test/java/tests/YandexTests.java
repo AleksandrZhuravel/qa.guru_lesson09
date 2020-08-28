@@ -22,7 +22,8 @@ public class YandexTests {
 
         $(".geolink__reg").click();
         $(".input__control").sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
-        $(".input__control").setValue("Нячанг").pressEnter().pressEnter();
+        $(".input__control").setValue("Нячанг");
+        $(".b-autocomplete-item").click();
 
         $(".geolink__reg").shouldHave(text("Нячанг"));
     }
