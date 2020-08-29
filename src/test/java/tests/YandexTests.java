@@ -12,7 +12,7 @@ import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
 
-public class YandexTests {
+public class YandexTests extends TestBase {
     @Test
     void yandexLocationPageShouldOpen() {
         addListener("AllureSelenide", new AllureSelenide().screenshots(true).savePageSource(true));
@@ -25,6 +25,6 @@ public class YandexTests {
         $(".input__control").setValue("Нячанг");
         $(".b-autocomplete-item").click();
 
-        $(".geolink__reg").shouldHave(text("Нячанга"));
+        $(".geolink__reg").shouldHave(text("Нячанг"));
     }
 }
