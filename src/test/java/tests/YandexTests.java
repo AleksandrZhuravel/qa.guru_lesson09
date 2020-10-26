@@ -25,6 +25,6 @@ public class YandexTests extends TestBase {
         $(".input__control").setValue("Нячанг");
         $(".b-autocomplete-item").click();
 
-        $(".geolink__reg").shouldHave(text("Нячанг"));
+        $(".geolink__reg").shouldHave(text("Нячанга"));
     }
 }
